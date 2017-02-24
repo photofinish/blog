@@ -1,0 +1,10 @@
+<div class="container">
+  <h1>Edit Atricle</h1>
+
+  <%= render 'form', atricle: @atricle %>
+  <%= link_to 'back', atricles_path %>
+
+  <% if @histories.size > 0 %>
+    <%= render 'histories/list', histories: @histories %>
+  <% end %>
+</div>

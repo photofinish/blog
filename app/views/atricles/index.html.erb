@@ -1,5 +1,17 @@
-<h1>Atricles#index</h1>
-<p>Find me in app/views/atricles/index.html.erb</p>
 <div class="container">
-  test bootstrap
+  <div class="row">
+    <%= link_to 'new', new_atricle_path, class: 'btn btn-default' %>
+  </div>
+  <div class="row">
+    <ul class="list-group">
+      <% @atricles.each do |atr| %>
+          <li class="list-group-item">
+            <div>
+              <%= link_to atr.title, atricle_path(atr) %>
+            </div>
+          </li>
+      <% end %>
+    </ul>
+  </div>
+
 </div>

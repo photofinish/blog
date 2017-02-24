@@ -1,0 +1,8 @@
+<h2>history</h2>
+<ul class="list-group">
+  <% histories.each do |item| %>
+      <li class="list-group-item">
+      <%= link_to (item.created_at.to_s :db), atricle_history_path(@atricle, item) %>
+      </li>
+  <% end %>
+</ul>

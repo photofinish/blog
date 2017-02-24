@@ -1,0 +1,8 @@
+<ul class="list-group">
+  <% @histories.each do |item| %>
+      <li class="list-group-item">
+    <%= item.title %>
+    <%= item.created_at %>
+      </li>
+  <% end %>
+</ul>

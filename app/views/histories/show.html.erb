@@ -1,0 +1,18 @@
+<h1>history</h1>
+<%= form_for @atricle do |f| %>
+    <%= f.hidden_field :id %>
+    <div class="form-group">
+      <%= f.label :title %>
+      <%= f.text_field :title, value: @history.title, class: "form-control", required: true %>
+    </div>
+    <div class="form-group">
+      <%= f.label :body %>
+      <%= f.text_area :body, value: @history.body, class: "form-control", required: true %>
+    </div>
+
+
+    <%= f.submit %>
+    <%= link_to 'back', edit_atricle_path(@atricle) %>
+<% end %>
+
+
