@@ -1,0 +1,18 @@
+<h1>Photos</h1>
+<%= form_for(@photo, remote: true)  do |f| %>
+    <div class="form-group">
+      <%= f.label :title %>
+      <%= f.text_field :title, class: "form-control", required: true %>
+    </div>
+    <div class="form-group">
+      <%= f.label :photo_file %>
+      <%= f.file_field :photo_file, required: true %>
+    </div>
+    <%= f.submit %>
+<% end %>
+
+<div id="#list">
+  <%= render 'list' %>
+</div>
+
+
