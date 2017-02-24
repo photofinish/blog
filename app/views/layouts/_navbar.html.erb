@@ -6,16 +6,18 @@
     </div>
 
     <ul class="nav navbar-nav">
-      <li><%= link_to 'List Atricles', atricles_path %></li>
+      <li><%= link_to 'Atricles', atricles_path %></li>
+      <li><%= link_to 'Photos', photos_path %></li>
       <li>
-        <div class="text-center text-info">
-          <%= flash[:notice].presence || flash[:alter] %>
-        </div>
+        <a class="notice"><%= notice %></a>
+        <a class="alert"><%= alert %></a>
       </li>
     </ul>
 
     <ul class="nav navbar-nav navbar-right">
-
+      <li>
+        <%= link_to 'Sign out', destroy_user_session_path, :method => :delete %>
+      </li>
     </ul>
 
   </div>
